@@ -7,6 +7,7 @@ function App() {
 			<RecipeItem recipe={{id: 2, name: 'Паста'}}/>
 			<RecipeItem recipe={{id: 3, name: 'Пицца'}}/>
 			<RecipeItem recipe={{id: 4, name: 'Печенье'}}/>
+			<RecipeItem recipe={{id: 5, name: 'Шарлотка'}}/>
 		</div>
   )
 }
