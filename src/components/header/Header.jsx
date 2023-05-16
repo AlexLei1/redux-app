@@ -7,7 +7,7 @@ const Header = () => {
 	const { favorites } = useFavorites() 
 	return (
 		<header className={styles.header}>
-			<BsFillBookmarkHeartFill fontSize={'25px'}/>
+			<BsFillBookmarkHeartFill fontSize={'30px'}/>
 			<span>{favorites.length}</span>
 		</header>
 	)
