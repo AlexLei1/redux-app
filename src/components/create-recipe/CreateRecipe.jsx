@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { useCreateRecipeMutation } from "../../store/api/recipe.api"
 import styles from './CreateRecipe.module.scss'
+import { useCreateRecipeMutation } from "../../store/api/api"
 
 const CreateRecipe = () => {
 	const [recipe, setRecipe] = useState({

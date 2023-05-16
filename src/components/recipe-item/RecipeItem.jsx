@@ -1,6 +1,7 @@
 import { useActions } from '../../hooks/useActions'
 import { useFavorites } from '../../hooks/useFavorites';
-import { useDeleteRecipeMutation } from '../../store/api/recipe.api';
+import { useDeleteRecipeMutation } from '../../store/api/api';
+
 import styles from './RecipeItem.module.scss'
 
 const RecipeItem = ( {recipe} ) => {
