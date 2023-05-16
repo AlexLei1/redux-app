@@ -4,8 +4,7 @@ import styles from './CreateRecipe.module.scss'
 
 const CreateRecipe = () => {
 	const [recipe, setRecipe] = useState({
-		name: '',
-		image: '',
+		name: ''
 	})
 
 	const [ CreateRecipe ] = useCreateRecipeMutation()
@@ -13,7 +12,7 @@ const CreateRecipe = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		CreateRecipe(recipe).then(() => {
-			setRecipe({name: '', image: ''})
+			setRecipe({name: ''})
 		})
 	}
 
@@ -29,14 +28,6 @@ const CreateRecipe = () => {
 						value={recipe.name} 
 						onChange={e => setRecipe({...recipe, name: e.target.value})}
 					/>
-				</label>
-				<label>
-					<input 
-						type="text" 
-						placeholder="Image"
-						value={recipe.image} 
-						onChange={e => setRecipe({...recipe, image: e.target.value})}
-						/>
 				</label>
 				<button type="submit">Create</button>
 		</form>

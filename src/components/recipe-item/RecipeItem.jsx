@@ -16,7 +16,6 @@ const RecipeItem = ( {recipe} ) => {
 
 	return (
 		<div className={styles.item}>
-			<img src={recipe.image} alt={recipe.name} />
 			<h3>{recipe.name}</h3>
 			<button onClick={() => toggleFavorites(recipe)}>{isExists ? 'Remove from':'Add to'} favorites</button>
 			<button onClick={() => deleteRecipe(recipe.id)}>delete</button>
