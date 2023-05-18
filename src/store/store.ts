@@ -20,4 +20,5 @@ export const store = configureStore({
 	devTools: true,
 })
 
-// export type storeState = ReturnType<typeof store.getState>
+export type RootState = ReturnType<typeof store.getState>
+

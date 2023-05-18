@@ -1,27 +1,27 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "name": "Apple Frangipan Tart"
-    },
-    {
-      "id": 2,
-      "name": "Apple & Blackberry Crumble"
-    },
-    {
-      "id": 3,
-      "name": "Apam balik"
-    },
-    {
-      "id": 4,
-      "name": "Ayam Percik"
-    },
-    {
       "name": "Яблоко",
+      "id": 1
+    },
+    {
+      "name": "Киви",
+      "id": 2
+    },
+    {
+      "name": "Вишня",
+      "id": 3
+    },
+    {
+      "name": "Черешня",
+      "id": 4
+    },
+    {
+      "name": "Черника",
       "id": 5
     },
     {
-      "name": "Салат ",
+      "name": "Груша",
       "id": 6
     }
   ]

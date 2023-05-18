@@ -1,25 +1,30 @@
-import { useState } from "react"
+import { FC, FormEvent, useState } from "react"
 import styles from './CreateRecipe.module.scss'
 import { useCreateRecipeMutation } from "../../store/api/api"
+import { IRecipeData } from "../../types/recipe.types"
 
-const CreateRecipe = () => {
-	const [recipe, setRecipe] = useState({
-		name: ''
-	})
+
+const defaultValue:IRecipeData = {
+	name: ''
+}
+
+const CreateRecipe: FC = () => {
+	const [recipe, setRecipe] = useState(defaultValue)
+
 
 	const [ CreateRecipe ] = useCreateRecipeMutation()
 
-	const handleSubmit = (e) => {
+	const handleCreateRecipe = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
-		CreateRecipe(recipe).then(() => {
-			setRecipe({name: ''})
+		await CreateRecipe(recipe).then(() => {
+			setRecipe(defaultValue)
 		})
 	}
 
 	return (
 
 		<div className={styles.blok}>
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleCreateRecipe}>
 				<h3>Create new recipt</h3>
 				<label>
 					<input 
@@ -29,7 +34,7 @@ const CreateRecipe = () => {
 						onChange={e => setRecipe({...recipe, name: e.target.value})}
 					/>
 				</label>
-				<button type="submit">Create</button>
+				<button disabled={!recipe.name} type="submit">Create</button>
 		</form>
 	</div>
 	)

@@ -1,6 +1,6 @@
 import {BsFillBookmarkHeartFill} from 'react-icons/bs'
 import styles from './Header.module.scss'
-import { useFavorites } from './../../hooks/useFavorites';
+import { useFavorites } from '../../hooks/useFavorites';
 
 const Header = () => {
 
